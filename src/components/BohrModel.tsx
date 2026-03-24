@@ -1,4 +1,5 @@
 import React from 'react';
+import { getElectronConfiguration } from '../lib/utils';
 
 interface BohrModelProps {
   atomicNumber: number;
@@ -6,22 +7,7 @@ interface BohrModelProps {
 }
 
 export const BohrModel: React.FC<BohrModelProps> = ({ atomicNumber, symbol }) => {
-  // Calculate electron shells
-  const getShells = (n: number) => {
-    const shells = [];
-    let remaining = n;
-    const capacities = [2, 8, 18, 32, 32, 18, 8];
-    
-    for (const cap of capacities) {
-      if (remaining <= 0) break;
-      const count = Math.min(remaining, cap);
-      shells.push(count);
-      remaining -= count;
-    }
-    return shells;
-  };
-
-  const shells = getShells(atomicNumber);
+  const shells = getElectronConfiguration(atomicNumber);
   const size = 300;
   const center = size / 2;
   const baseRadius = 30;
