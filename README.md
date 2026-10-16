@@ -4,6 +4,8 @@ An interactive, responsive, and visually stunning modern Periodic Table of Eleme
 
 Available in multiple languages: **English**, **简体中文 (Simplified Chinese)**, **繁體中文 (Traditional Chinese)**, **日本語 (Japanese)**, and **한국어 (Korean)**.
 
+🌐 **Live Demo Online**: [https://chunshilaioqf.github.io/periodic_table/](https://chunshilaioqf.github.io/periodic_table/)
+
 👉 [简体中文说明文档 (README in Simplified Chinese)](./README_zh.md)
 
 ---

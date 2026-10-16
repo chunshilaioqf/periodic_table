@@ -4,6 +4,8 @@
 
 支持 5 种语言无缝切换：**简体中文**、**English**、**繁體中文**、**日本語** 与 **한국어**。
 
+🌐 **在线演示地址 (Live Demo)**：[https://chunshilaioqf.github.io/periodic_table/](https://chunshilaioqf.github.io/periodic_table/)
+
 👉 [English Documentation (README in English)](./README.md)
 
 ---
