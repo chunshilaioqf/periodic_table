@@ -1,4 +1,5 @@
 import { PeriodicElement, Language, Category } from '../types';
+import { ELEMENT_PROPERTIES } from './elementProperties';
 
 const getCategory = (n: number, g: number, p: number): Category => {
   if (n === 1 || [6, 7, 8, 9, 15, 16, 17, 34, 35, 53].includes(n)) return 'reactive-nonmetal';
@@ -723,6 +724,7 @@ export const fullElements: PeriodicElement[] = Array.from({ length: 118 }, (_, i
     category: cat,
     group: g,
     period: p,
-    translations
+    translations,
+    properties: ELEMENT_PROPERTIES[n]
   };
 }).sort((a, b) => a.number - b.number);

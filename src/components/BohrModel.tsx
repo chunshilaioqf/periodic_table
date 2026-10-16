@@ -1,12 +1,17 @@
 import React from 'react';
 import { getElectronConfiguration } from '../lib/utils';
 
+import { Language } from '../types';
+import { translations } from '../data/translations';
+
 interface BohrModelProps {
   atomicNumber: number;
   symbol: string;
+  lang?: Language;
 }
 
-export const BohrModel: React.FC<BohrModelProps> = ({ atomicNumber, symbol }) => {
+export const BohrModel: React.FC<BohrModelProps> = ({ atomicNumber, symbol, lang = 'en' }) => {
+  const t = translations[lang] || translations['en'];
   const shells = getElectronConfiguration(atomicNumber);
   const size = 300;
   const center = size / 2;
@@ -73,8 +78,8 @@ export const BohrModel: React.FC<BohrModelProps> = ({ atomicNumber, symbol }) =>
         })}
       </svg>
       <div className="mt-4 flex gap-4 text-[10px] font-mono uppercase tracking-widest text-blue-300 opacity-70">
-        <span>Electrons: {atomicNumber}</span>
-        <span>Shells: {shells.length}</span>
+        <span>{t.electrons}: {atomicNumber}</span>
+        <span>{t.shells}: {shells.length}</span>
       </div>
     </div>
   );

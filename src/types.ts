@@ -8,6 +8,8 @@ export interface ElementTranslation {
   story: string;
 }
 
+import { ElementPhysicalProperty } from './data/elementProperties';
+
 export interface PeriodicElement {
   number: number;
   symbol: string;
@@ -16,6 +18,7 @@ export interface PeriodicElement {
   group: number;
   period: number;
   translations: Record<Language, ElementTranslation>;
+  properties?: ElementPhysicalProperty;
 }
 
 export const CATEGORIES = [
